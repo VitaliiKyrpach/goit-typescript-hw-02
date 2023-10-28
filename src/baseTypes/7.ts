@@ -8,12 +8,13 @@ enum WeekDay {
 	Wednesday = "Wednesday",
 	Thursday = "Thursday",
 	Friday = "Friday",
-}
-enum WeekEnd {
 	Saturday = "Saturday",
-	Sunday = "Subday",
+	Sunday = "Sunday",
 }
-function isWeekend(day: WeekDay | WeekEnd): boolean {
-	if (WeekDay) return true;
+
+function isWeekend(day: WeekDay): boolean {
+	if (day === WeekDay.Saturday || day === WeekDay.Sunday) return true;
 	return false;
 }
+
+isWeekend(WeekDay.Sunday);
